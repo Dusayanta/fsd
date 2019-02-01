@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8"/>
 	<title>Simple Calculator</title>
-	<script type="text/javascript" src="calc.js"></script>
-	<link rel="stylesheet" type="text/css" href="calc.css"></link>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+	<script type="text/javascript">
+		const append = (number)=>{
+			console.log(number);
+			let textbox = document.getElementById('text1');
+			textbox.value=textbox.value+number;
+			localStorage.setItem('number2',textbox.value);
+		}
+		const operate = (op)=>{
+			let textbox = document.getElementById('text1');
+			textbox.value='';
+			localStorage.setItem('operator',op);
+			let num1=localStorage.getItem('number2');
+			localStorage.setItem('number1',num1);
+		}
+		const calc = ()=>{
+			let first=parseInt(localStorage.getItem('number1'));
+			let second= parseInt(document.getElementById('text1').value);
+			let operator = localStorage.getItem('operator');
+			if(operator=='+')
+				document.getElementById('text1').value=parseInt(first+second);
+			if(operator=='-')
+				document.getElementById('text1').value=parseInt(first-second);
+			if(operator=='/')
+				document.getElementById('text1').value=parseInt(first/second);
+			if(operator=='*')
+				document.getElementById('text1').value=parseInt(first*second);
+		}
+	</script>
 </head>
 <body>
 	<div class="calculator-body">
@@ -13,9 +39,7 @@
 				<span>Input</span>
 				<input type="text" name="" id="text1">
 			</div>
-			<div class="result">
-				<button value="Clear" onclick="clearMem()">Clear</button>
-			</div>
+			<div class="result"></div>
 		</div>
 		<div class="pad">
 			<div class="numpad">
