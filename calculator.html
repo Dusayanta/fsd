@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+	<script type="text/javascript">
+		const append = (number)=>{
+			console.log(number);
+			let textbox = document.getElementById('text1');
+			textbox.value=textbox.value+number;
+			localStorage.setItem('number2',textbox.value);
+		}
+		const operate = (op)=>{
+			let textbox = document.getElementById('text1');
+			textbox.value='';
+			localStorage.setItem('operator',op);
+			let num1=localStorage.getItem('number2');
+			localStorage.setItem('number1',num1);
+		}
+		const calc = ()=>{
+			let first=parseInt(localStorage.getItem('number1'));
+			let second= parseInt(document.getElementById('text1').value);
+			let operator = localStorage.getItem('operator');
+			if(operator=='+')
+				document.getElementById('text1').value=parseInt(first+second);
+			if(operator=='-')
+				document.getElementById('text1').value=parseInt(first-second);
+			if(operator=='/')
+				document.getElementById('text1').value=parseInt(first/second);
+			if(operator=='*')
+				document.getElementById('text1').value=parseInt(first*second);
+		}
+	</script>
+</head>
+<body>
+	<div class="calculator-body">
+		<div class="screen">
+			<div class="input">
+				<span>Input</span>
+				<input type="text" name="" id="text1">
+			</div>
+			<div class="result"></div>
+		</div>
+		<div class="pad">
+			<div class="numpad">
+				<div class="row">
+					<input type="button" name="" value="1" onclick="append(1)">
+					<input type="button" name="" value="2" onclick="append(2)">
+					<input type="button" name="" value="3" onclick="append(3)">
+				</div>
+				<div class="row">
+					<input type="button" name="" value="4" onclick="append(4)">
+					<input type="button" name="" value="5" onclick="append(5)">
+					<input type="button" name="" value="6" onclick="append(6)">
+				</div>
+				<div class="row">
+					<input type="button" name="" value="7" onclick="append(7)">
+					<input type="button" name="" value="8" onclick="append(8)">
+					<input type="button" name="" value="9" onclick="append(9)">
+				</div>
+				<div class="row">
+					<input type="button" name="" value="0" onclick="append(0)">
+					<input type="button" name="" value="+" onclick="operate('+')">
+					<input type="button" name="" value="-" onclick="operate('-')">
+				</div>
+				<div class="row">
+					<input type="button" name="" value="/" onclick="operate('/')">
+					<input type="button" name="" value="*" onclick="operate('*')">
+					<input type="button" name="" value="=" onclick="calc()">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
