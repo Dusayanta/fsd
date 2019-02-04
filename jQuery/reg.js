@@ -80,4 +80,22 @@ $(document).ready(()=>{
 	}
 	validateAll();
 	});
+	$('#toggle-form-btn').click(()=>{
+		$('#form-area').slideToggle('slow');
+	});
+	$('#name').mouseover(()=>{
+		$('#name').css({"width":"+=50%","border":"2px solid dodgerblue"});
+	}).mouseout(()=>{
+		$('#name').css({"width":"-=50%","border":"1px solid black"});
+	});
+	$('#pass').mouseover(()=>{
+		$('#pass').css({"width":"+=50%","border":"2px solid dodgerblue"});
+	}).mouseout(()=>{
+		$('#pass').css({"width":"-=50%","border":"1px solid black"});
+	});
+	$('#email').mouseover(()=>{
+		$('#email').css({"width":"+=50%","border":"2px solid dodgerblue"});
+	}).mouseout(()=>{
+		$('#email').css({"width":"-=50%","border":"1px solid black"});
+	});
 });
