@@ -45,14 +45,15 @@ const operate = (op)=>{
 				document.getElementById('text1').value = result;
 			}
 		}
-const clearMem = ()=>{
-	console.log('clear called');
-	let tt=document.getElementById('text1');
-	tt.value='';
-	localStorage.removeItem('number1');
-	localStorage.removeItem('number2');
-	localStorage.removeItem('operator');
-	}
+		const clearMem = ()=>{
+			console.log('clear called');
+			let tt=document.getElementById('text1');
+			tt.value='';
+			localStorage.removeItem('number1');
+			localStorage.removeItem('number2');
+			localStorage.removeItem('operator');
+		}
+		
 class Calc{
 	calculate(i,j){
 		console.log('Calc ');

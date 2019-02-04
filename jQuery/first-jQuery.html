@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jquery-3.3.1.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(document).ready(()=>{
+			console.log('Hello World');
+			//
+			$('#clickMe').click(()=>{
+				$('#message').val('Running hoorah..!!');
+			});
+			$('#set-content').click(()=>{
+                console.log('Setting content for the page');
+                //$('#content').text('<b>Oh! finally,Jquery has eased my load</b>');
+                $('#content').html('<b>Oh! finally,Jquery has eased my load</b>');
+            });
+		});
+	</script>
+</head>
+<body>
+ <h2>Hello world</h2>
+ <input type="text" name="" id="message">
+ <input type="button" name="" value="Click Me !" id="clickMe">
+ <input type="button" value='Set content' id='set-content'/>
+ <div id='content'>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login | jQuery</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(()=>{
+			$('#login').click((event)=>{
+				event.preventDefault();
+				console.log('Login clicked');
+				let user=$('#username').val();
+				let pass=$('#password').val();
+
+				if(user=="")
+				{
+					$('#username').focus();
+					$('#error-msg').text('Username and/or Password cannot be empty');
+					$('#error-msg').css("color","red");
+				}
+				else if(pass=="")
+				{
+					$('#password').focus();
+					$('#error-msg').text('Password cannot be empty');
+					$('#error-msg').css("color","red");
+				}
+			});
+		});
+	</script>
+	<h2>Login</h2>
+</head>
+<body>
+	<div id="login-form-content">
+		<form>
+			<input type="text" name="" id="username" placeholder="Enter username" value="">
+			<input type="password" id="password" name="" placeholder="Enter password" value="">
+			<input type="submit" id="login" name="" value="Submit">
+		</form>
+	</div>
+	<div id="error-msg"></div>
+</body>
+</html>
+<style type="text/css">
+	.login-form-content{
+		background-color: rgba(245,245,220,0.5);
+		align-content: center;
+		width: 100%;
+	}
+	input{
+		display: block;
+	}
+	input[type=text],input[type=password]{
+		border: 1px solid darkgrey;
+		border-radius: 6px;
+		margin: 5px;
+		height: 4em;
+		width: 20em;
+	}
+	input[type=submit]{
+		border: 2px solid dodgerblue;
+		border-radius: 6px;
+		margin: 5px;
+		height: 4em;
+		width: 20em;
+</style>
