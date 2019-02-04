@@ -5,68 +5,6 @@
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="reg.css">
-	<!--<script type="text/javascript">
-		$(document).ready(()=>{
-
-			$('#register').click((e)=>{
-				let name=$('#name').val();
-				let pass=$('#pass').val();
-				let email=$('#email').val();
-				$('#err').text('');
-
-				if(name !="" && name.length<4)
-				{
-					e.preventDefault();
-					$('#err').text('Name should be more than 4 characters');
-				}
-				else if(name=="")
-				{
-					e.preventDefault();
-					$('#err').text('Name cannot be empty');
-				}
-				else if(pass!="")
-				{
-					if(pass.length<8)
-					{
-						e.preventDefault();
-						$('#err').text('Password should be more than 8 characters');
-					}
-					else
-					{
-						e.preventDefault();
-						let regularExpression = /(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/;
-					    let valid = regularExpression.test(pass);
-					    console.log(pass,valid)
-						if(!regularExpression.test(pass))
-						{
-							$('#err').text('Password should be alpha numeric');
-						}
-					}
-				}
-				else if(pass=="")
-				{
-					e.preventDefault();
-					$('#err').text('Password cannot be empty');
-				}
-				if(email!="")
-				{
-					let emailRegex=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-					let valid=emailRegex.test(email);
-					console.log(email,valid);
-					if(!emailRegex.test(email))
-						{
-							e.preventDefault();
-							$('#err').text('Email criteria not met');
-						}
-				}
-				else if(email=="")
-				{
-					e.preventDefault();
-					$('#err').text('Email cannot be empty');
-				}
-			});
-		});
-	</script>-->
 	<script type="text/javascript" src="reg.js"></script>
 </head>
 <body>
@@ -76,7 +14,7 @@
 			<label class="label">Name:</label>
 			<input type="text" name="" id="name">
 			<label class="label">Password:</label>
-			<input type="pasword" name="" id="pass">
+			<input type="password" name="" id="pass">
 			<label class="label">Email:</label>
 			<input type="text" name="" id="email">
 			<input type="submit" name="" value="Register" id="register">
