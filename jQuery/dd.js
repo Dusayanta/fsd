@@ -34,6 +34,15 @@ const employees = [
             city: 'New york',
             country: 'US'
         }
+    },
+    {
+        id: 5,
+        name: 'Samir',
+        salary: 75000,
+        address:{
+            city: 'Kolkata',
+            country: 'India'
+        }
     }
 ];
 $(document).ready(()=>{

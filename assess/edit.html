@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Product</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+<h2>Edit Product</h2>
+<div id="add-form">
+		<form action="list.html" onsubmit="return editProduct()">
+		<label>SKU</label>
+		<input type="text" name="" id="sku" required readonly="true">
+		<label>Name:</label>
+		<input type="text" name="" id="name" required>
+		<label>Category</label>
+		<input type="text" name="" id="cat" readonly="true">
+		<label>Price</label>
+		<input type="number" name="" id="price">
+		<label>Quantity</label>
+		<input type="number" name="" id="quantity">
+		<input type="submit" name="" value="Add Product">
+	</form>
+	</div>
+</body>
+<script type="text/javascript" src="edit.js"></script>
+</html>

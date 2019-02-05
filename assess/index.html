@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assess</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div id="add-form">
+		<form action="list.html" onsubmit="return addProduct()">
+		<label>Name:</label>
+		<input type="text" name="" id="name" required>
+		<label>Category</label>
+		<select id="cat" required="">
+			<option value="">Select product category</option>
+			<option value="Electronics">Electronics</option>
+			<option value="Clothing">Clothing</option>
+			<option value="Kitchenware">Kitchenware</option>
+		</select>
+		<label>Price</label>
+		<input type="number" name="" id="price">
+		<label>SKU</label>
+		<input type="text" name="" id="sku" required>
+		<label>Quantity</label>
+		<input type="number" name="" id="quantity">
+		<input type="submit" name="" value="Add Product">
+	</form>
+	</div>
+
+</body>
+<script type="text/javascript" src="action.js"></script>
+</html>
