@@ -1,4 +1,51 @@
+#product-list{
+	margin: auto;
+}
+h2{
+	font-size: 2.7em;
+	text-align: center;
+	border-bottom: 2px solid slateblue;
+}
+table{
+	margin-left: 90px;
+	width: 80%;
+	text-align: center;
+	border: 1px solid dodgerblue;
+	border-collapse: collapse;
+}
+th{
+	font-size: 1.5em;
+	color: mediumseagreen;
+	border-bottom: 1px solid dodgerblue;
+	padding: 20px;
+}
+td{
+	font-size: 1.4em;
+	border-bottom: 1px solid dodgerblue;
+	padding: 18px;
+}
 .under-stock:hover{
-	background-color: red;
+	background-color: tomato;
+	color: white;
+}
+button,input[type=button]{
+	font-size: 1em;
+	text-align: center;
+	border-radius: 8px;
+	background-color: mediumseagreen;
+	color: white;
+}
+#add-btn{
+	margin: auto;
+	width: 20%;
+	padding: 20px;
+}
+input[type=button]{
+	width: 70%;
+	height: 70px;
+	font-size: 1.5em;
+}
+input[type=button]:hover,button:hover{
+	background-color: slateblue;
 	color: white;
 }

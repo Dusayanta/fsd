@@ -1,3 +1,42 @@
 label,input{
 	display: block;
 }
+label{
+	font-size: 1.3em;
+	padding:7px 0px 7px 0px;
+}
+h2{
+	font-size: 2.7em;
+	text-align: center;
+	border-bottom: 2px solid slateblue;
+}
+#add-form{
+	margin: auto;
+	width: 35%;
+}
+input:not([type=submit]),select{
+	width: 70%;
+	padding: 12px 20px;
+	margin-bottom: 8 0px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border-color: lightblue;
+	font-size: 1em;
+}
+input[type=text]:focus,input[type=number]:focus{
+	border-color: slateblue;
+}
+input[type=submit]{
+	margin-top: 30px;
+	border-radius: 8px;
+	background-color: slateblue;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+	margin-left: 94px;
+	width: 43%;
+	height: 63px;
+}
+input[type=submit]:hover{
+	background-color: mediumseagreen;
+}
