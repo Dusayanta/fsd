@@ -2,6 +2,7 @@ let dl_list=[];
 const form = document.querySelector('form');
 const btn_modal= document.getElementById('btn-modal');
 const btn_modal_close = document.querySelectorAll('.close');
+const search = document.getElementById('filter');
 
 const addDl = (e)=>{
 	e.preventDefault();
@@ -22,7 +23,6 @@ const addDl = (e)=>{
 	dob.value='';
 	address.value='';
 	dl.value='';
-
 
 }
 const generateDlRandom = ()=>{
@@ -46,19 +46,19 @@ const generateList = ()=>{
 			classProp='bg-secondary text-white';
 	let html = `
 	<div class="col-lg-4">
-		<div class="card ${classProp}">
+		<div class="card ${classProp}" style="margin: 2px;">
 			<div class="card-header text-right"><a onclick="return editDL('${list.id}','${list.name}','${list.address}','${list.dob}')" style="color:mediumseagreen;"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;&nbsp;<a onclick="return deleteDL('${list.id}')" style="color:red;"><i class="fa fa-times-circle"></i></a></div>
 			<div class="card-body">
 				<div class="row">
-					<div class="col-md-4"><img src="person.png" height="50" width="50"></div>
+					<div class="col-md-4"><img src="person.png" height="100" width="100" style="border-radius: 50%;"></div>
 					<div class="col-md-7">
-					<div class="${list.id}">
-						<label for="name">Name:&nbsp;</label><span id="card_name">${list.name}</span><br>
-						<label for="dob">DOB:&nbsp;</label><span id="card_dob">${list.dob}</span><br>
-						<label for="address">Address:&nbsp;</label><span id="card_add">${list.address}</span><br>
-						<label for="dlno">DL. No.&nbsp;</label><span id="card_id">${list.id}</span><br>
-						<span id="edit_btn"></span>
-					</div>
+						<div class="${list.id}">
+							<label for="name">Name:&nbsp;</label><span id="card_name">${list.name}</span><br>
+							<label for="dob">DOB:&nbsp;</label><span id="card_dob">${list.dob}</span><br>
+							<label for="address">Address:&nbsp;</label><span id="card_add">${list.address}</span><br>
+							<label for="dlno">DL. No.&nbsp;</label><span id="card_id">${list.id}</span><br>
+							<span id="edit_btn"></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -114,12 +114,31 @@ const updateDL = (dl_id)=>{
 	generateList();
 	console.log(dl_list);
 }
+const filterDL = (e)=>{
+	const text = e.target.value.toLowerCase();
+	
+	document.querySelectorAll('#card_name').forEach((card)=>{
+		const name = (card.textContent).toLowerCase();
+		if(name.indexOf(text) != -1){
+			card.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.style.display='block';
+		}
+		else{
+			card.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.style.display='none';
+		}
+	});
+}
 const loadEventlisteners = () =>{
 	btn_modal.addEventListener('click',generateDlRandom);
 	form.addEventListener('submit', addDl);
 	btn_modal_close.forEach((b)=>{
 		b.addEventListener('click',generateList);
 	});
+	search.addEventListener('keyup',filterDL);
 }
 
 loadEventlisteners();
+
+// $("#filter").keyup(function(){
+//   $("#filter").css("background-color", "pink");
+//   console.log($('span[id="card_name"]').parent());
+// });
