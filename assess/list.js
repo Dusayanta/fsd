@@ -22,22 +22,25 @@ const edit_product = (sku_id)=>{
 	location.href='edit.html';
 }
 const delete_product = (sku_id)=>{
-	var data=JSON.parse(productObj);
-	var pos=0,i=-1;
-	data.forEach(product=>{
-		i++;
-		if(product.sku==parseInt(sku_id))
-			pos=i;
-	});
-	if(data.length<=1)
+	if(confirm('Are you sure to delete the data'))
 	{
-		data.splice(pos,1);
-		localStorage.removeItem('product_list_string');
+		var data=JSON.parse(productObj);
+		var pos=0,i=-1;
+		data.forEach(product=>{
+			i++;
+			if(product.sku==parseInt(sku_id))
+				pos=i;
+		});
+		if(data.length<=1)
+		{
+			data.splice(pos,1);
+			localStorage.removeItem('product_list_string');
+		}
+		else
+		{
+			data.splice(pos,1);
+			localStorage.setItem('product_list_string', JSON.stringify(data));
+		}
+		location.href='list.html';
 	}
-	else
-	{
-		data.splice(pos,1);
-		localStorage.setItem('product_list_string', JSON.stringify(data));
-	}
-	location.href='list.html';
 }

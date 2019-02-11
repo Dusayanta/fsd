@@ -13,10 +13,10 @@
 	data.forEach(p=>{
 		if(p.sku==sku_local_storage)
 		{
-			name.value= p.name;
-			cat.value=p.category;
-			price.value=p.price;
-			quantity.value=p.quantity;
+			name.value = p.name;
+			cat.value = p.category;
+			price.value = p.price;
+			quantity.value = p.quantity;
 		}
 	});
 

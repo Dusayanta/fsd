@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<title>Task</title>
+	<style type="text/css">
+		pre{
+			font-size: 1.2em;
+		}
+		nav{
+			margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="nav nav-tabs nav-pills justify-content-center" id="nav-tab" role="tablist">
+			<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-login" role="tab" aria-controls="nav-home"aria-selected="true">Login</a>
+			<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-read" role="tab" aria-controls="nav-profile" aria-selected="false">Read</a>
+		</div>
+	</nav>
+	<div class="col-md-4 offset-md-4">
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane active" id="nav-login" aria-labelledby="nav-home-tab">
+			<div class="card text-white bg-secondary mb-3">
+					<div class="card-header text-center"><h2>Login</h2></div>
+					<div class="card-body">
+							<form>
+								<div class="form-group">
+									<label>Email<span class="navbar-toggler-icon"></span></label>
+									<input type="email"class="form-control form-control-lg" name="email" required>
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input type="password"class="form-control form-control-lg" name="password" required>
+								</div>
+								<div class="form-group">
+									<input type="submit" name="" class="btn btn-lg btn-success" value="Register">
+								</div>
+							</form>
+					</div>	
+				</div>
+			</div>
+			<div class="tab-pane" id="nav-read" aria-labelledby="nav-profile-tab">
+			<div class="card">
+				<div class="card-header"><h2>Poem</h2></div>
+				<div class="card-title text-center"><h4><u>Stopping by Woods on a Snowy Evening</u></h4></div>
+				<div class="card-body text-center">
+<pre>
+Whose woods these are I think I know.
+His house is in the village, though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+</pre>
+<pre> 
+My little horse must think it queer
+To stop without a farmhouse near
+Between the woods and frozen lake
+The darkest evening of the year.
+</pre> 
+<pre>
+He gives his harness bells a shake
+To ask if there’s some mistake.
+The only other sound’s the sweep
+Of easy wind and downy flake.
+</pre>
+<pre> 
+The woods are lovely, dark and deep,
+But I have promises to keep,
+And miles to go before I sleep,
+And miles to go before I sleep.
+</pre>
+				</div>
+				<div class="card-footer">
+					<blockquote class="blockquote text-right">
+						<footer class="blockquote-footer"><cite title="Source Title">Robert Frost</cite></footer>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
