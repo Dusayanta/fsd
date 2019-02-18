@@ -46,24 +46,17 @@ const generateList = ()=>{
 			classProp='bg-secondary text-white';
 	let html = `
 	<div class="col-lg-4">
-		<div class="card m-2 ${classProp}">
-			<div class="card-header text-right">
-				<a onclick="return editDL('${list.id}','${list.name}','${list.address}','${list.dob}')">
-					<i class="fa fa-edit edit_btn_class"></i>
-				</a>&nbsp;&nbsp;&nbsp;
-				<a onclick="return deleteDL('${list.id}')">
-					<i class="fa fa-times-circle delete_btn_class"></i>
-				</a>
-			</div>
+		<div class="card ${classProp}" style="margin: 2px;">
+			<div class="card-header text-right"><a onclick="return editDL('${list.id}','${list.name}','${list.address}','${list.dob}')" style="color:mediumseagreen;"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;&nbsp;<a onclick="return deleteDL('${list.id}')" style="color:red;"><i class="fa fa-times-circle"></i></a></div>
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-4"><img src="person.png" height="100" width="100" style="border-radius: 50%;"></div>
-					<div class="col-md-8">
+					<div class="col-md-7">
 						<div class="${list.id}">
-							<label for="name">Name:&nbsp;</label><span id="card_name"><strong>${list.name}</strong></span><br>
-							<label for="dob">DOB:&nbsp;</label><span id="card_dob"><strong>${list.dob}</strong></span><br>
-							<label for="address">Address:&nbsp;</label><span id="card_add"><strong>${list.address}</strong></span><br>
-							<label for="dlno">DL. No.&nbsp;</label><span id="card_id"><strong>${list.id}</span></strong><br>
+							<label for="name">Name:&nbsp;</label><span id="card_name">${list.name}</span><br>
+							<label for="dob">DOB:&nbsp;</label><span id="card_dob">${list.dob}</span><br>
+							<label for="address">Address:&nbsp;</label><span id="card_add">${list.address}</span><br>
+							<label for="dlno">DL. No.&nbsp;</label><span id="card_id">${list.id}</span><br>
 							<span id="edit_btn"></span>
 						</div>
 					</div>
