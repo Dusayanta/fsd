@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <input type="number" #number1>
+    <input type="number" #number2>
+  </div>
+  <div>
+    <div class="selects">
+      <select (change)="perform($event,number1.value,number2.value)">
+        <option value="">Select Operation</option>
+        <option value="add">ADD</option>
+        <option value="sub">SUB</option>
+        <option value="mul">MUL</option>
+        <option value="div">DIV</option>
+      </select>
+    </div>
+    <div class="selects">
+        <button (click)="increment()">Calculate</button>
+      </div>
+    <div>
+      <button (click)="reset()">Reset</button>
+    </div>
+  </div>
+  <div>
+    <ng-template *ngIf="result then result_display"></ng-template>
+    <ng-template #result_display>
+      {{result}}
+    </ng-template>
+  </div>
+</div>

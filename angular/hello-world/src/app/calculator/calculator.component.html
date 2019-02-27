@@ -1,0 +1,20 @@
+<div>
+  <table>
+    <tr>
+        <th>First Number (A)</th>
+        <th>Second Number (B)</th>
+        <th>ADD (A + B)</th>
+        <th>SUB (A - B)</th>
+        <th>MUL (A * B)</th>
+        <th>DIV (A / B)</th>
+    </tr>
+    <tr *ngFor="let d of data">
+      <td>{{d.number}}</td>
+      <td>{{d.quotient}}</td>
+      <td>{{d.add}}</td>
+      <td>{{d.sub}}</td>
+      <td>{{d.mul}}</td>
+      <td>{{d.div}}</td>
+    </tr>
+  </table>
+</div>

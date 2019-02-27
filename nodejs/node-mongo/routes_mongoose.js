@@ -2,7 +2,7 @@ const express = require('express')
 const routes = express.Router()
 const dao = require('./dao_mongoose')
 
-routes.get('/projects',(rq,rs)=>{
+routes.get('/users',(rq,rs)=>{
     dao.getProjects((err,data)=>{
         if(err){
             rs.status(500).send({
@@ -13,13 +13,14 @@ routes.get('/projects',(rq,rs)=>{
         }
     })
 })
-routes.post('/projects/add',(rq,rs)=>{
+routes.post('/user/add',(rq,rs)=>{
     dao.addProjects(rq.body,(err,data)=>{
         if(err){
             rs.status(500).send({
                 error: "Unable to process the request",
                 trace: err
             })
+            console.log(err);
         }else{
             rs.status(201).send(data)
         }

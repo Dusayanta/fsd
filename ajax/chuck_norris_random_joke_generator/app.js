@@ -8,7 +8,7 @@ const getJokes = (e) => {
     xhr.onprogress = function () {
         document.querySelector('.spinner').style.display = 'block';
     }
-    xhr.onload = function () {
+    xhr.onload = ()=> {
         if (this.status === 200) {
             const response = JSON.parse(this.responseText);
             if (response.type === 'success') {

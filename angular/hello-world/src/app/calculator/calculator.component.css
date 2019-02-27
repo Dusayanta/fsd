@@ -1,0 +1,21 @@
+table{
+	margin-left: 90px;
+	width: 80%;
+	text-align: center;
+	border: 1px solid dodgerblue;
+	border-collapse: collapse;
+}
+th{
+	font-size: 1.5em;
+	color: mediumseagreen;
+	border-bottom: 1px solid dodgerblue;
+	padding: 20px;
+}
+td{
+	font-size: 1.4em;
+	border-bottom: 1px solid dodgerblue;
+	padding: 18px;
+}
+tr:nth-child(even){
+  background-color: beige;
+}

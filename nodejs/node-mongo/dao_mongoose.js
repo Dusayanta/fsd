@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/organization')
 
-const Employee = new mongoose.Schema({
-    _id : mongoose.SchemaTypes.Number,
-    name : mongoose.SchemaTypes.String,
-    salary : mongoose.SchemaTypes.Number
-});
+// const Employee = new mongoose.Schema({
+//     _id : mongoose.SchemaTypes.Number,
+//     name : mongoose.SchemaTypes.String,
+//     salary : mongoose.SchemaTypes.Number
+// });
 
 const ProjectSchema = new mongoose.Schema({
     _id : mongoose.SchemaTypes.Number,
     name : mongoose.SchemaTypes.String,
-    emps :[Employee]
+    email : mongoose.SchemaTypes.String
 });
 
 const Project = mongoose.model('project',ProjectSchema);
@@ -24,7 +24,7 @@ const addProjects = (data,callback)=>{
     const prj = new Project({
          _id: data._id,
          name : data.name,
-         emps: data.emps
+         email: data.email
      })
      Project.create(prj,(err)=>{
          callback(err,{
